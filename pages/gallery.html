@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Doggy Dossier</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+    <!-- Custom CSS Styles -->
+    <link rel="stylesheet" href="/css/gallery.css" />
+  </head>
+
+  <!-- START OF BODY -->
+  <body class="vh-100">
+    <!-- Gallery Card Template -->
+    <template id="gallery-card-template">
+      <article class="col-sm-12 col-md-4 col-xxl-3 p-2">
+        <div class="card">
+          <img src="..." class="card-img-top gallery-card-image" alt="..." />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+      <div class="container-md">
+        <a class="navbar-brand" href="#">Doggy Dossier</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav-header"
+          aria-controls="nav-header"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-header">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./facts.html">Facts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./gallery.html">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAIN Content -->
+    <main role="main">
+      <div class="container-md mt-4 text-center">
+        <!-- Gallery Heading -->
+        <section class="gallery-heading mb-4">
+          <h2>Doggy Dossier Gallery</h2>
+          <h5>Select an option to filter</h5>
+        </section>
+        <!-- Gallery Buttons -->
+        <section>
+          <div class="btn-group gallery-btn-group">
+            <button class="btn btn-outline-secondary g-btn btn-active" data-filter="*">All</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-hound">Hound</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-mixed">Mixed</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-herding">Herding</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-working">Working</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-terrier">Terrier</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-sporting">Sporting</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-non-sporting">Non-Sporting</button>
+            <button class="btn btn-outline-secondary g-btn" data-filter=".breed-toy">Toy</button>
+          </div>
+        </section>
+        <!-- Gallery Items Go Here -->
+        <section class="d-flex flex-wrap justify-content-center gallery-items"></section>
+      </div>
+    </main>
+    <!-- SCRIPTS -->
+    <!-- FancyBox 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script src="/js/gallery.js"></script>
+    <!-- END OF BODY -->
+  </body>
+</html>

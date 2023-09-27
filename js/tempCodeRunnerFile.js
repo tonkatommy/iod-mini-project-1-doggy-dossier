@@ -1,0 +1,1 @@
+document.querySelector(".hero-image").src = "";

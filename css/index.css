@@ -1,0 +1,11 @@
+@import "variables.css";
+/* Colours HEX 
+--honeydew: #f1faeeff;
+--red-pantone: #e63946ff;
+--non-photo-blue: #a8dadcff;
+--berkeley-blue: #1d3557ff;
+--cerulean: #457b9dff; */
+.hero-c-img {
+  height: 50vh;
+  object-fit: cover;
+}
